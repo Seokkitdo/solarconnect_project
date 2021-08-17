@@ -13,7 +13,6 @@ const Card = () => {
   const clickHandler = () => {
     if (number.length === 0) alert('내용을 입력해주세요')
 
-    arrInput.current.focus()
     setAscendingSort({
       asc: mergeAscSort(number.split(',').map((num) => Number(num))),
       des: mergeDesSort(number.split(',').map((num) => Number(num))),

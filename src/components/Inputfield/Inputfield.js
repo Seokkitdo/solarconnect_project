@@ -8,6 +8,7 @@ const Inputfield = ({ setNumber, number, input, read, delay, ref }) => {
   }
 
   const require = input ? '숫자만 입력해주세요' : ''
+
   return (
     <div className="inputWrap">
       {number ? (
