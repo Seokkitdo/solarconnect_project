@@ -2,21 +2,30 @@ import React from 'react'
 
 import 'components/Inputfield/Inputfield.scss'
 
-const Inputfield = ({ setNumber, number, input, read, value }) => {
+const Inputfield = ({ setNumber, number, input, read, delay, ref }) => {
   const handleChange = (e) => {
     setNumber(e.target.value)
   }
 
   const require = input ? '숫자만 입력해주세요' : ''
-  console.log(number)
   return (
     <div className="inputWrap">
-      {!number ? (
+      {number ? (
         <textarea
           rows="5"
           type="text"
           placeholder={require}
-          value={value}
+          value={number}
+          onChange={handleChange}
+          readOnly={read}
+          ref={ref}
+        />
+      ) : !delay ? (
+        <textarea
+          rows="5"
+          type="text"
+          placeholder={require}
+          value={number}
           onChange={handleChange}
           readOnly={read}
         />
