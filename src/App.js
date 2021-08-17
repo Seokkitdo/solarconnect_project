@@ -1,9 +1,11 @@
+import Card from 'components/Card/Card'
+
 function App() {
-    return (
-        <div className="App">
-            <div>이번과제도 힘내보아용~~~</div>
-        </div>
-    );
+  return (
+    <div className="container">
+      <Card />
+    </div>
+  )
 }
 
-export default App;
+export default App
